@@ -1,0 +1,56 @@
+
+*************************IDEAS***************************************************************************
+
+Crear chat: https://www.youtube.com/watch?v=9e7CTR2Ya4Y otro: https://medium.com/@adabur/introduction-to-django-channels-and-websockets-cb38cd015e29
+
+Sistema de puntaje: jugo, propina, buena onda. Estrellas del oferente. 
+
+Opción: contrato fijamente. Notificación fija al mismo empleado. Publico y a él le llega notificacion de que publiqué y le doy prioridad. 
+
+Implementar Sistema de Tops - Sistema de Nuevos y ayudar.
+
+REVER EL TEMA DEL PRECIO - MODALIDAD Y DEMAS. OPCION CONTRAOFERTAR O CONSULTA O DEJAR LIBRE (ESCUCHO PRECIOS)
+
+MISMOS TOKENS PARA TRABAJADORES. PUNTUALIDAD, PRECIOS, RAPIDEZ, ETC
+
+Trabajos en grupo tipo busco cuadrilla o pueden postularse varios.
+ 
+RECORDAR VALIDAR DESDE EL FRONT los formularios antes de enviarlos
+
+Posibilidad de al postularse dejar un mensaje. El oferente puede dejar ciertas pregs que el trab puede responder y explayarse un poco más
+
+****************************************************************************************************
+
+
+
+-------------------------------------------------------BACKEND-------------------------------------------------------
+
+(hecho) crear trabajador y oferente al crear usuario, o al ofrecer servicios, o aplicar.
+(hecho) Listar todos los trabajadores
+(hecho) Listar mis postulaciones
+(hecho) Incluir en la postulacion más info del empleo, para mostrarlo en el dashboard del trabajador
+
+En registro de User, verificar mail distintos.
+
+verificar completar usuario
+
+No loguearse nuevamente con una cuenta activa
+IMPEDIR MIS postulacion
+Mismo user no se puede 
+
+Calificaciones - Habilidades - Etc
+*Quitar el campo de trabajo Habilidades, o si no, hacer que tome lo mismo que 
+está en jobs de modelo de usuario.
+
+
+MOSTRAR SOLO LOS EMPLEOS VIGENTES!
+Verificar que la eleccion del postulante la haga solo el oferente
+
+
+TEMA POSTULARSE! 
+
+cuidado que no se contraten más de uno.
+
+
+-----------------------------------------------------------------
+CREAR CHAT Y HACERLO ACCESIBLE SOLO LUEGO DE QUE EL OFERENTE ACEPTÓ AL trabajador

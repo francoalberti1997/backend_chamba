@@ -26,12 +26,13 @@ SECRET_KEY = 'django-insecure-9ey_js+v*9m@b9(t0oy3e+i$p17pju_y!_%=n##7u2)=$mnf%o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',  # <-- Here
     'corsheaders',
     'backend_api',
+    'chat',
 ]
 
 MIDDLEWARE = [
@@ -76,6 +78,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
+ASGI_APPLICATION = "backend.asgi.application"
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}
+
+
+CHANNELS_WS_ALLOWED_HOSTS = ['*']
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -140,5 +155,14 @@ REST_FRAMEWORK = {
 }
 import os
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "frankoocarp22@gmail.com"
+EMAIL_HOST_PASSWORD = "vtsr dbbf xmcq zejm"
+
+ALLOWED_HOSTS = []
